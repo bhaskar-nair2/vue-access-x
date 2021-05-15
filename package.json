@@ -1,0 +1,36 @@
+{
+  "name": "vue-access-x",
+  "version": "0.1.1",
+  "description": "An access control plugin for vuejs (2.x) applications",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Bhaskar Nair",
+    "url": "http://bstark.tech",
+    "username": "bhaskar-nair2",
+    "email": "b.bhaskar.nair@gail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhaskar-nair2/vue-access-x.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "access",
+    "roles",
+    "access",
+    "control",
+    "plugin"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhaskar-nair2/vue-access-x/issues"
+  },
+  "homepage": "https://github.com/bhaskar-nair2/vue-access-x#readme",
+  "dependencies": {
+    "shvl": "^2.0.3"
+  }
+}
