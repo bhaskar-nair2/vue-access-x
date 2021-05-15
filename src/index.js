@@ -1,6 +1,5 @@
-import * as shvl from "shvl";
-
-import * as accessStore from "./accessStore.js";
+const shvl = require('shvl')
+const accessStore = require('./vuex/store')
 
 const Access = {
   install: function(Vue, { store, entityBased = false, overrideClasses = {} }) {
@@ -27,9 +26,9 @@ const Access = {
       const { invert } = binding.modifiers;
 
       const permission = shvl.get(accessState, `permissions.${entity}`);
-      
+
       let allowed = false;
-      // Action Comp Tabs Route
+
       switch (type) {
         case "action":
         case "acts":
@@ -70,34 +69,33 @@ const Access = {
       update: accessValidator,
     });
 
-    const utils = {
-      failFunc: function() {
-        // store.dispatch("notific/errorMan", { type: "access" });
-      },
-      passFunc: function() {},
-    };
+    // TODO
+    // const utils = {
+    //   failFunc: function() {},
+    //   passFunc: function() {},
+    // };
 
     // TODO
     // Set class for the particular entity
-    Vue.directive("access-class", {
-      bind(el, binding) {
-        classes.actionClass = binding.value;
-      },
-    });
+    // Vue.directive("access-class", {
+    //   bind(el, binding) {
+    //     classes.actionClass = binding.value;
+    //   },
+    // });
 
     // TODO
     // Emit function if interacted with even tho access is false
-    Vue.directive("access-func", {
-      bind(el, binding) {
-        if (typeof binding.value !== "function") {
-          throw new Error(
-            "Directive access-func only takes a function as an argument"
-          );
-        } else {
-          utils.failFunc = binding.value;
-        }
-      },
-    });
+    // Vue.directive("access-func", {
+    //   bind(el, binding) {
+    //     if (typeof binding.value !== "function") {
+    //       throw new Error(
+    //         "Directive access-func only takes a function as an argument"
+    //       );
+    //     } else {
+    //       utils.failFunc = binding.value;
+    //     }
+    //   },
+    // });
 
     // * Instance Functions for actoins in vuex
     Vue.prototype.$setRole = function(roleName) {
