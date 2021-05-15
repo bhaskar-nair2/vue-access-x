@@ -4,7 +4,8 @@
   "description": "An access control plugin for vuejs (2.x) applications",
   "main": "dist/access.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": {
     "name": "Bhaskar Nair",
@@ -35,8 +36,10 @@
   },
   "devDependencies": {
     "eslint": "^7.26.0",
-    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.23.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
     "webpack": "^5.37.0",
     "webpack-cli": "^4.7.0"
   },

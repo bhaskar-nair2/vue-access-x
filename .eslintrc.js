@@ -1,15 +1,12 @@
 module.exports = {
-  env: {
-    browser: true,
-    commonjs: true,
-  },
-  extends: [
-    'airbnb-base',
-  ],
+  root: true,
   parserOptions: {
-    ecmaVersion: 12,
+    sourceType: 'module'
   },
-  rules: {
-    'no-param-reassign': ['error', { props: false }],
-  },
-};
+
+  extends: 'standard',
+  // required to lint *.vue files
+  plugins: [
+    'html'
+  ]
+}
