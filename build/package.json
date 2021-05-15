@@ -33,12 +33,9 @@
   },
   "homepage": "https://github.com/bhaskar-nair2/vue-access-x#readme",
   "dependencies": {
-    "eslint": "^7.26.0",
     "shvl": "^2.0.3"
   },
-  "devDependencies": {},
-  "peerDependencies": {
-    "vue": "2.x",
-    "vuex": "3.x"
+  "devDependencies": {
+    "snowpack": "^3.4.0"
   }
 }
