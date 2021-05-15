@@ -36,7 +36,9 @@
     "shvl": "^2.0.3"
   },
   "devDependencies": {
-    "eslint": "^7.26.0"
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.1"
   },
   "peerDependencies": {
     "vue": "2.x",

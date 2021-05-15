@@ -1,35 +1,35 @@
-const shvl = require('shvl')
+const shvl = require('shvl');
 
-module.exports =  {
-  namespaced:true,
-  state:{
-    role: "",
-    entity: "all",
+module.exports = {
+  namespaced: true,
+  state: {
+    role: '',
+    entity: 'all',
     auth: false,
     permissions: {
       all: {
-        view: ["view"],
-        comp: ["textAccess", "imgAccess", "buttonAccess"],
-        action: ["editAccess"],
+        view: ['view'],
+        comp: ['textAccess', 'imgAccess', 'buttonAccess'],
+        action: ['editAccess'],
       },
       home: {
         view: [],
         comp: [],
-        action: ["access1"],
+        action: ['access1'],
       },
       bookings: {
         view: [],
         comp: [],
-        action: ["access1"],
+        action: ['access1'],
       },
       payments: {
-        view: ["access1"],
+        view: ['access1'],
         comp: [],
         action: [],
       },
     },
   },
-  mutations:{
+  mutations: {
     SET_USER_ROLE(store, role) {
       store.role = role;
     },
@@ -43,19 +43,19 @@ module.exports =  {
       shvl.set(store.permissions, entityData.name, entityData.values);
     },
   },
-  actions:{
+  actions: {
     setUserRole({ commit }, roleName) {
-      commit("SET_USER_ROLE", roleName);
+      commit('SET_USER_ROLE', roleName);
     },
     setAuthState({ commit }, authState) {
-      commit("SET_AUTH_STATE", authState);
+      commit('SET_AUTH_STATE', authState);
     },
     setCurrentEntity({ commit }, entityName) {
-      commit("SET_ENTITY", entityName);
+      commit('SET_ENTITY', entityName);
     },
     addEntity({ commit }, payload) {
-      commit("ADD_ENTITY", payload);
+      commit('ADD_ENTITY', payload);
     },
   },
-  getters:{}
-}
+  getters: {},
+};
