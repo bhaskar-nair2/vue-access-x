@@ -1,12 +1,15 @@
 module.exports = {
-  root: true,
-  parserOptions: {
-    sourceType: 'module'
+  env: {
+    browser: true,
+    commonjs: true,
+    es2021: true
   },
-
-  extends: 'standard',
-  // required to lint *.vue files
-  plugins: [
-    'html'
-  ]
+  extends: [
+    'standard'
+  ],
+  parserOptions: {
+    ecmaVersion: 12
+  },
+  rules: {
+  }
 }
